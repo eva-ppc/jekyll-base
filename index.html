@@ -1,23 +1,156 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eva PPC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="evappc.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="evappc.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCExTBr3LcqGRpA9K5DGxLvg_onC1oyQ6s&callback=myMap"></script>
+ <link href="https://fonts.googleapis.com/css?family=Leckerli+One|Nova+Square|Kanit:500" rel="stylesheet">
+</head>
+<body style="background:#FFE303;">
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<!--Left side menu-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-6">
+		<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">About</a>
+    <a href="#">Blog</a>
+    <a href="#">Contact</a>
 </div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="row">
+                <div class="col-xs-1">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+			<div class="text-center">
+		<img src="cartoon_eva.png" class="img-circle" alt="Cartoon Eva" width="250" height="250">
+  				<div class="header-text"> <h1>Hi, I'm Eva!</h1>
+  				</div>
+  			<div class="about-text">
+  			<p>I am digital marketing specialist with a main focus on online advertising</p>
+  			</div>
+				</div>
+		</div>
+	
+	<!--skill cards-->
+	<div class="col-sm-6 cards"> 
+		<!--skill cards 1st row-->
+		<span style="cursor:pointer">
+			<div class="row ">
+				<div class="card-group">
+  					<div class="card">
+  						<div class="card-block">
+  					<div class="square" onmouseover="document.getElementById('demo-1').style.color='black'" onmouseout="document.getElementById('demo-1').style.color='white'">
+  					<h4 class="card-title-1" id="demo-1" onmouseover="mOver(this)" onmouseout="mOut(this)">SEM Strategy</h4>
+  					</div>
+  					</div>
+  					</div>
+  				</div>
+  				<div class="card-group">
+  					<div class="card">
+  						<div class="card-block">
+  					<div class="square" onmouseover="document.getElementById('demo-2').style.color='black'" onmouseout="document.getElementById('demo-2').style.color='white'">
+  					<h4 class="card-title-2" id="demo-2" onmouseover="mOver(this)" onmouseout='innerHTML = "Adwords"'>Adwords</h4>
+  					</div>
+  					</div>
+  					</div>
+  				</div>
+  				<div class="card-group">
+  					<div class="card">
+  						<div class="card-block">
+  				<div class="square" onmouseover="document.getElementById('demo-3').style.color='black'" onmouseout="document.getElementById('demo-3').style.color='white'">
+  					<h4 class="card-title-3" id="demo-3" onmouseover="mOver(this)" onmouseout='innerHTML = "Bing/Yahoo"'>Bing/Yahoo</h4>
+  					</div>
+  					</div>
+  					</div>
+  				</div>
+			</div>
+			
+			<!--skill cards 2nd row-->
+			
+			<div class="row ">
+				<div class="card-group">
+  					<div class="card">
+  					<div class="card-block">
+  					<div class="square" onmouseover="document.getElementById('demo-4').style.color='black'" onmouseout="document.getElementById('demo-4').style.color='white'">
+  					<h4 class="card-title-4" id="demo-4" onmouseover="mOver(this)" onmouseout='innerHTML = "Social Media"'>Social Media</h4>
+  					</div>
+  					</div>
+  					</div>
+  				</div>
+  				<div class="card-group">
+  					<div class="card">
+  					<div class="card-block">
+  				<div class="square" onmouseover="document.getElementById('demo-5').style.color='black'" onmouseout="document.getElementById('demo-5').style.color='white'">
+  					<h4 class="card-title-5" id="demo-5" onmouseover="mOver(this)" onmouseout='innerHTML = "Mobile"'>Mobile</h4>
+  					</div>
+  					</div>
+  					</div>
+  				</div>
+  				<div class="card-group">
+  					<div class="card">
+  					<div class="card-block">
+  					<div class="square" onmouseover="document.getElementById('demo-6').style.color='black'" onmouseout="document.getElementById('demo-6').style.color='white'">
+  					<h4 class="card-title-6" id="demo-6" onmouseover="mOver(this)" onmouseout='innerHTML = "Youtube"'>Youtube</h4>
+  					</div>
+  					</div>
+  					</div>
+  				</div>
+			</div>
+			
+			<!--skill cards 3rd row-->
+			
+			<div class="row ">
+				<div class="card-group">
+  					<div class="card">
+  					<div class="card-block">
+  					<div class="square" onmouseover="document.getElementById('demo-7').style.color='black'" onmouseout="document.getElementById('demo-7').style.color='white'">
+  					<h4 class="card-title-7" id="demo-7" onmouseover="mOver(this)" onmouseout='innerHTML = "A/B Testing"'>A/B Testing</h4>
+  					</div>
+  					</div>
+  				</div>
+  				<div class="card-group">
+  					<div class="card">
+  					<div class="card-block">
+  					<div class="square" onmouseover="document.getElementById('demo-8').style.color='black'" onmouseout="document.getElementById('demo-8').style.color='white'">
+  					<h4 class="card-title-8" id="demo-8" onmouseover="mOver(this)" onmouseout='innerHTML = "Landing Pages"'>Landing Pages</h4>
+  					</div>
+  					</div>
+  					</div>
+  				</div>
+  				<div class="card-group">
+  					<div class="card">
+  					<div class="card-block">
+  					<div class="square" onmouseover="document.getElementById('demo-9').style.color='black'" onmouseout="document.getElementById('demo-9').style.color='white'">
+ 		 			<h4 class="card-title-9" id="demo-9" onmouseover="mOver(this)" onmouseout='innerHTML = "Audit"'>Audit</h4>	
+  					</div>
+  					</div>
+  					</div>
+  				</div>
+  				</span>
+			</div>
+	</div>
+	</div>		
+</div>		
+</div>	
+</body>
+
+<footer style="background: #ffffff;">
+
+</footer>
+</html>
